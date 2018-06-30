@@ -12,7 +12,6 @@ function headernavigation() {
 
     function template() {
         return [
-            '<topinfo></topinfo>',
             '<section class="header-navigation">',
             '<div class="row">',
             '<div class="col-xs-12 col-sm-6 pull-left">',

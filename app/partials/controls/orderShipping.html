@@ -45,16 +45,16 @@
                             <div ng-show="!currentOrder.IsMultipleShip()" class="view-form-icon">
                                 <largeshipaddresssearch></largeshipaddresssearch>
                                 <!--<div ng-show="shipaddresses" ng-class="{'view-form-select': !currentOrder.ShipAddressID, '': currentOrder.ShipAddressID }">
-                                <label ng-class="{required: !currentOrder.IsMultipleShip()}" ng-show="currentOrder.ShipAddressID || !currentOrder.IsMultipleShip()">{{('Shipping' | r) + ' ' + ('Address' | r) | xlat}}</label>
-                                <select class="form-control" name="shippingAddress"
-                                        ng-change="setShipAddressAtOrderLevel()"
-                                        ng-options="address.ID as address.AddressName for address in shipaddresses"
-                                        ng-model="currentOrder.ShipAddressID"
-                                        ng-required="!currentOrder.IsMultipleShip()">
-                                    <option value=""></option>
-                                </select>
-                                <i class="fa fa-map-marker">
-                            </div></i>-->
+                                        <label ng-class="{required: !currentOrder.IsMultipleShip()}" ng-show="currentOrder.ShipAddressID || !currentOrder.IsMultipleShip()">{{('Shipping' | r) + ' ' + ('Address' | r) | xlat}}</label>
+                                        <select class="form-control" name="shippingAddress"
+                                                ng-change="setShipAddressAtOrderLevel()"
+                                                ng-options="address.ID as address.AddressName for address in shipaddresses"
+                                                ng-model="currentOrder.ShipAddressID"
+                                                ng-required="!currentOrder.IsMultipleShip()">
+                                            <option value=""></option>
+                                        </select>
+                                        <i class="fa fa-map-marker">
+                                    </div></i>-->
                                 <div ng-show="user.ShipMethod != null && shippers" ng-class="{'view-form-select': !currentOrder.LineItems[0].ShipperName, '': currentOrder.LineItems[0].ShipperName }">
                                     <label ng-class="{required: !currentOrder.IsMultipleShip() && user.ShipMethod != null}" ng-show="currentOrder.LineItems[0].ShipperName || !currentOrder.IsMultipleShip() && user.ShipMethod != null">{{('Shipping' | r) + ' Method' | xlat}}</label>
                                     <select class="form-control" ng-change="updateShipper()" name="shipMethod"
