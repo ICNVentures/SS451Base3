@@ -69,7 +69,7 @@ function ($scope, $routeParams, $location, $451, Order, OrderConfig, User) {
 					if (callback) callback();
 					$scope.actionMessage = 'Your Changes Have Been Saved';
 					
-					if ($location.path().includes("apprcart"))
+					if ($location.path().indexOf("apprcart") > -1)
 					{
 					    $location.path('approval');
 					}
@@ -150,7 +150,7 @@ function ($scope, $routeParams, $location, $451, Order, OrderConfig, User) {
 	};
 
 	$scope.cancelEdit = function() {
-	    if ($location.path().includes("apprcart"))
+	    if ($location.path().indexOf("apprcart") > -1)
 	    {
 		    $location.path('approval');
 	    }
@@ -167,13 +167,13 @@ function ($scope, $routeParams, $location, $451, Order, OrderConfig, User) {
     $scope.clickItem = function(item, isEditforApproval, ID, idx) 
     {
         var x = (item.Product.Type == 'Kit' ? 'kit' : 'cart') + '/' + (item.Product.InteropID) + '/' + 
-                (isEditforApproval ? ID + '/' : '') + idx + ($location.path().includes("/apprcart/") ? "/approval" : "");
+                (isEditforApproval ? ID + '/' : '') + idx + ($location.path().indexOf("/apprcart/") > -1 ? "/approval" : "");
         
         $location.path(x);
     };
 
     $scope.isApproval = function()
     {
-        return $location.path().includes("/apprcart/");
+        return $location.path().indexOf("/apprcart/") > -1;
     }
 }]);

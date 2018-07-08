@@ -108,9 +108,10 @@ function ($scope, $location, $route, $routeParams, $window, ProductDisplayServic
                 
                     for (var b = 0; b < btn.length; b++)
                     {
-                        if (btn[b].outerHTML.includes("saveasnew"))
+                        //if (btn[b].outerHTML.includes("saveasnew"))
+                        if (btn[b].outerHTML.indexOf("saveasnew") > -1)
                         {   
-                        btn[b].style.visibility = "hidden";
+                            btn[b].style.visibility = "hidden";
                         }
                     }
                     

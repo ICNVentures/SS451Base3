@@ -14,13 +14,23 @@ four51.app.directive("contactinfo", function() {
 	return obj;
 });
 
-four51.app.directive("topinfo", function() {
+four51.app.directive("logininfo", function() {
 	var obj = {
 		restrict: 'E',
-		templateUrl:'topinfo.html'
+		templateUrl:'logininfo.html'
 	};
 	return obj;
 });
+
+four51.app.directive("helpinfo", function() {
+	var obj = {
+		restrict: 'E',
+		templateUrl:'helpfinfo.html',
+		controller: 'helpInfoCtrl'
+    };
+	return obj;
+});
+
 
 four51.app.directive('productlistview', function() {
     var obj = {

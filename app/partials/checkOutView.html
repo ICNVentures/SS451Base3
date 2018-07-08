@@ -34,10 +34,9 @@
                             </li>
                             <!--<li ng-if="shipaddresses.length == 0 && cart_shipping.shippingAddress.$invalid">{{'Please enter a ' + ('Shipping' | rl) + ' ' + ('Address' | rl) | xlat}}</li>
                             <li ng-if="shipaddresses.length != 0 && cart_shipping.shippingAddress.$invalid">{{'Please choose a ' + ('Shipping' | rl) + ' ' + ('Address' | rl) | xlat}}</li>-->
-
-                            <li ng-if="shipaddresses.length == 0 && !currentOrder.ShipAddressID">{{'Please enter a ' + ('Shipping' | rl) + ' ' + ('Address' | rl) | xlat}}</li>
-                            <li ng-if="shipaddresses.length != 0 && !currentOrder.ShipAddressID">{{'Please choose a ' + ('Shipping' | rl) + ' ' + ('Address' | rl) | xlat}}</li>
                             
+                            <li ng-if="!currentOrder.ShipAddressID">{{'Please enter a ' + ('Shipping' | rl) + ' ' + ('Address' | rl) | xlat}}</li>
+                                                        
                             <li ng-if="shipaddresses.length == 0 && cart_shipping.shippingAddressLineItem.$invalid">{{'Please enter a ' + ('Shipping' | rl) + ' ' + ('Address' | rl) | xlat}}</li>
                             <li ng-if="shipaddresses.length != 0 && cart_shipping.shippingAddressLineItem.$invalid">{{'Please choose a ' + ('Shipping' | rl) + ' ' + ('Address' | rl) | xlat}}</li>
                             <li ng-if="cart_shipping.shipMethod.$invalid">{{'Please choose a ' + ('Shipping' | rl) + ' ' + ('Method' | rl) | xlat}}</li>
