@@ -25,8 +25,7 @@ four51.app.directive("logininfo", function() {
 four51.app.directive("helpinfo", function() {
 	var obj = {
 		restrict: 'E',
-		templateUrl:'helpfinfo.html',
-		controller: 'helpInfoCtrl'
+		templateUrl:'helpinfo.html'
     };
 	return obj;
 });
