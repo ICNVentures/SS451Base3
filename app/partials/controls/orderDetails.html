@@ -32,7 +32,7 @@
                     <label class="required">{{'Cost Center' | r | xlat}}</label>
                     <select class="form-control" ng-required="user.Permissions.contains('CostCenterPerOrder') && !user.Permissions.contains('CostCenterPerLine') && !user.Permissions.contains('FreeFormCostCenter')"
                             ng-change="updateCostCenter()" ng-if="user.CostCenters.length > 1 && !user.Permissions.contains('FreeFormCostCenter')"
-                            ng-options="center.Name as center.Name for center in user.CostCenters" ng-model="currentOrder.CostCenter"><option value=""></option></select>
+                            ng-options="center.Name as center.Description + ' - ' + center.Name for center in user.CostCenters" ng-model="currentOrder.CostCenter"><option value=""></option></select>
                     <input class="form-control" ng-show="user.Permissions.contains('FreeFormCostCenter')" ng-model="currentOrder.CostCenter" type='text'
                            ng-required="user.Permissions.contains('CostCenterPerOrder') && !user.Permissions.contains('CostCenterPerLine') && user.Permissions.contains('FreeFormCostCenter')"
                            placeholder="{{'Cost Center' | r | xlat}}" />
