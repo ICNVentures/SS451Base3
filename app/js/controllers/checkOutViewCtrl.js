@@ -53,8 +53,13 @@ function ($scope, $routeParams, $location, $filter, $rootScope, $451, User, Orde
         var rc = '';
         var po = $scope.user.Permissions.contains('PayByPO');
         var cc = $scope.user.Permissions.contains('PayByCreditCard');
-        
-        if (po && cc)
+        var sa = $scope.user.Permissions.contains('PayByBudgetAccount');
+
+        if (sa)
+        {
+            rc = "budget";
+        }
+        else if (po && cc)
         {
             rc = "both";
         }
